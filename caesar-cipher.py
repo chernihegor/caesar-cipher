@@ -17,3 +17,5 @@ def encrypt(text: str, shift: int) -> str:
         else:
             encrypted += char
     return encrypted
+def decrypt(text: str, shift: int) -> str:
+    return encrypt(text, -shift)
