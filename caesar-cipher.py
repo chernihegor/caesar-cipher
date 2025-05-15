@@ -19,3 +19,16 @@ def encrypt(text: str, shift: int) -> str:
     return encrypted
 def decrypt(text: str, shift: int) -> str:
     return encrypt(text, -shift)
+if name == "__main__":
+    action = input("Выберите действие (encrypt/decrypt): ").strip().lower()
+    text = input("Введите текст: ")
+    shift = int(input("Введите сдвиг: "))
+    
+    if action == "encrypt":
+        result = encrypt(text, shift)
+    elif action == "decrypt":
+        result = decrypt(text, shift)
+    else:
+        result = "Неверное действие!"
+    
+    print(f"Результат: {result}")
